@@ -1,0 +1,12 @@
+html body{
+    margin: 0px;
+    padding: 0px;
+}
+body #map{
+    height: 100%;
+    width: 100%;
+}
+.description{
+    background-color: rgba(176, 190, 186, 0.274);
+    width: 100%;
+}
