@@ -42,18 +42,13 @@ $(function (){
     ()=>{
       layers.clearLayers();
       data.events.forEach(event => {
-        //data variable contains  the json file composed of a set of events   , we use forEach to iterate over the events array
             event.geometry.forEach(element=>{
-              //We iterate for a second time over the geometry because it's also a set of objects.
                     let circlemarker =L.circleMarker(element.coordinates,
                     {
                       radius :5,color :(event.categories[0].title=='Wildfires')?'orange':(event.categories[0].title=='Volcanoes')?'green':'aqua'
                        ,fillColor :(event.categories[0].title=='Wildfires')?'orange':(event.categories[0].title=='Volcanoes')?'green':'aqua'
                   }
                     ).addTo(layers).bindPopup(
-                      //Then we create a set of markers each one refers to a specific event
-                      //We assign the markers into the layerGroup to control it well .
-                      //Then we assign a popup to each marker using bindPopup () method 
                       "<p>Title :"+event.title+"</p>"+
                       "<p>Date :"+element.date+"</p>"+
                       "<p>Categorie :"+event.categories[0].title+"</p>"
