@@ -40,7 +40,6 @@ $(function (){
   );
   all.click(
     ()=>{
-      selectedEvent =sal.val();
       layers.clearLayers();
       visualizeData(data.events);
     }
